@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
+1. Search "Trackpad"
+- toggle Tap to click
+- in More Gestures, enable App Exposé (four fingers)
 
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+2. Search "drag"
+- Toggle Use trackpad for dragging, choose Dragging style (three fingers)
