@@ -2,6 +2,8 @@
 
 ## 1. OS fixes
 ```
+xcode-select --install
+
 bash mac.sh
 ```
 
@@ -18,14 +20,15 @@ bash mac.sh
 
 ## 4. Install homebrew
 ```
-cd
-mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
-export PATH=$HOME/homebrew/bin:$PATH
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
 ## 5. Install zsh (an alternative to bash)
 ```
-brew install zsh
+brew install zsh neofetch wget
 ```
 
 ## 6. Install oh my zsh
@@ -40,4 +43,9 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 cd macOS-automated-setup
 open fonts/*
+```
+
+## 8. Install apps
+```
+wget https://github.com/atom/atom/releases/download/v1.60.0/atom-mac.zip && unzip atom-mac.zip && rm atom-mac.zip
 ```
